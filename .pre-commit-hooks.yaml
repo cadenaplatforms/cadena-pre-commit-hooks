@@ -1,0 +1,6 @@
+- id: check-requirements-txt-contains-version
+  name: check requirements.txt files contain specific versions
+  description: ensures reproducibility by requiring pinned versions in requirements.txt files.
+  entry: check-requirements-txt-contains-version
+  language: python
+  files: (requirements|constraints).*\.txt$

@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "cadena-pre-commit-hooks"
+version = "0.1.0"
+description = "Assorted pre-commit hooks"
+authors = ["Jesus Lopez <jesus@jesusla.com>"]
+readme = "README.md"
+packages = [{include = "cadena_pre_commit_hooks", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requirements-parser = "^0.11.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+tox = "^4.21.2"
+coverage = "^7.6.1"
+covdefaults = "^2.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+check-requirements-txt-contains-version = "cadena_pre_commit_hooks.pin_requirements_txt:main"
